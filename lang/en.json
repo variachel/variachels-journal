@@ -1,0 +1,15 @@
+{
+    "variachels-journal.JournalStyles": "Variachel'sJournal Styles",
+    "variachels-journal.Base": "Base Wrapper",
+    "variachels-journal.Header": "Journal Header",
+    "variachels-journal.Content": "Journal Content",
+    "variachels-journal.ImageWrapper": "Image Wrapper",
+    "variachels-journal.CharacterImage": "Character Image",
+    "variachels-journal.CircleImage": "Journal Image",
+    "variachels-journal.Information": "Information Highlight",
+    "variachels-journal.Warning": "Warning Highlight",
+    "variachels-journal.Error": "Error Highlight",
+    "variachels-journal.Dark": "Dark Highlight",
+    "variachels-journal.4ColGrid": "4 Column Grid",
+    "variachels-journal.Centered": "Centered"
+}

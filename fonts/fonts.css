@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Signika';
+    src: url('signika/signika.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Signika';
+    src: url('signika/signikaBold.woff2') format('woff2');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Tiamat';
+    src: url('tiamat/tiamat.woff2') format('woff2');
+}

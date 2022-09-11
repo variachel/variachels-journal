@@ -1,0 +1,661 @@
+body {
+    --variachels-journal-black: #000000;
+    --variachels-journal-text-shadow: #00000090;
+    --variachels-journal-image-shadow: #808080;
+    --variachels-journal-template-header-color: #363532;
+    --variachels-journal-button-hover-color: #d69e07;
+    --variachels-journal-folder-select-bg-color: #5c87b9;
+    --variachels-journal-header-text-color: #696969;
+    --variachels-journal-tooltip-background: #29343d;
+    --variachels-journal-color-shadow-highlight: #ffa500;
+
+    --font-awesome: 'Font Awesome 6 Pro';
+    --font-awesome-5: 'Font Awesome 5 Free';
+
+    font-family: Signika;
+    font-size: 14px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.variachels-journal {
+    margin-inline: auto;
+}
+
+.variachels-journal .journal-header {
+    color: var(--variachels-journal-template-header-color);
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--variachels-journal-black);
+    box-shadow: 0 0 4px rgb(208, 208, 208) inset;
+    margin-bottom: 0.5rem;
+    margin-inline: auto;
+}
+
+.variachels-journal .journal-content {
+    color: var(--variachels-journal-template-header-color);
+    padding: 3px 10px;
+    line-height: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #555;
+    box-shadow: 0 0 2px var(--variachels-journal-black);
+    margin-bottom: 0.5rem;
+}
+
+.variachels-journal blockquote {
+    margin: 1rem 0.5rem 0.5rem;
+    background: rgba(214, 150, 0, 0.4);
+    border: 1px solid var(--variachels-journal-button-hover-color);
+    box-shadow: inset 0 0 5px var(--variachels-journal-black);
+    position: relative;
+    padding-right: 0.3rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.variachels-journal blockquote::after {
+    content: '❝';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: -2px;
+    transform: translate(-50%, -50%);
+    width: 1.2em;
+    height: 1.2em;
+    background: white;
+    box-shadow: 0 4px 5px -1px hsla(0 0% 0% / 20%);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    padding-top: 0.5em;
+    font-size: 18px;
+    font-style: normal;
+    text-indent: 0;
+}
+
+.variachels-journal hr.vari {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+.variachels-journal hr.vari::after {
+    content: '§';
+    display: inline-block;
+    position: relative;
+    top: -0.5em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: transparent;
+}
+
+.variachels-journal table {
+    background-color: transparent;
+    border-spacing: 5px;
+    color: var(--variachels-journal-template-header-color);
+    font-family: Signika;
+    text-align: justify;
+}
+
+.variachels-journal td {
+    border: 1px solid var(--variachels-journal-image-shadow);
+    border-radius: 5px;
+    padding: 8px;
+    vertical-align: top;
+    width: 50%;
+}
+
+.variachels-journal td img {
+    border: 0;
+    margin-left: -5px;
+}
+
+.variachels-journal img {
+    border: 0;
+}
+
+.variachels-journal h1,
+.variachels-journal h2,
+.variachels-journal h3,
+.variachels-journal h4 {
+    border: 0;
+    /* color: #f34d1f; */
+    color: white;
+    margin: 0;
+    text-shadow: 0 0 5px var(--variachels-journal-text-shadow);
+}
+
+.variachels-journal ul {
+    list-style: none;
+}
+
+.variachels-journal li {
+    color: var(--variachels-journal-template-header-color);
+}
+
+.variachels-journal ul li::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    content: '\f3a5';
+    color: #0b3771;
+    padding: 0 8px 0 0;
+    font-size: 0.9em;
+    text-shadow: 0 0 5px var(--variachels-journal-text-shadow);
+}
+
+.variachels-journal .journal-image {
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0 0 12px var(--variachels-journal-image-shadow);
+    margin: 0.5rem;
+}
+
+.variachels-journal .journal-image-margin {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.variachels-journal .journal-image-places {
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 12px var(--variachels-journal-image-shadow);
+}
+
+.variachels-journal .journal-image-margin-places {
+    margin-left: 0.25rem;
+    margin-top: 1rem;
+}
+
+.variachels-journal .journal-image-circle {
+    border: 0;
+    filter: drop-shadow(0 0 8px #000);
+    margin: 0.5rem;
+}
+
+.variachels-journal .shadow-highlight {
+    color: #bf2e0a;
+    text-shadow: 0 0 5px var(--variachels-journal-text-shadow);
+}
+
+.variachels-journal .centered {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Content links */
+
+.variachels-journal a[href] {
+    color: transparent;
+    background: transparent;
+}
+
+.variachels-journal a:hover {
+    text-shadow: 0 0 8px var(--variachels-journal-template-header-color);
+}
+
+.variachels-journal a.content-link.broken:hover {
+    text-shadow: 0 0 8px var(--variachels-journal-black);
+}
+
+.variachels-journal a.content-link,
+.variachels-journal a.content-link {
+    background: transparent;
+    border: 0;
+    white-space: nowrap;
+    word-break: break-all;
+    color: var(--variachels-journal-template-header-color);
+    margin-left: -5px;
+}
+
+.variachels-journal a.content-link i::before,
+.variachels-journal a.content-link i::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    content: '\f518';
+    color: #d29f28;
+    padding: 0 1px 0 2px;
+    margin-left: 0.3rem;
+}
+
+.variachels-journal a.content-link.broken,
+.variachels-journal a.content-link.broken {
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px dashed red;
+    margin: 0;
+}
+
+.variachels-journal a.content-link.broken i::before,
+.variachels-journal a.content-link.broken i::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    content: '\f0c1';
+    color: red;
+    padding: 0 1px 0 0;
+}
+
+/* Highlighting - wrap around paragraphs */
+
+.variachels-journal .highlight {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #191813;
+    border-radius: 5px;
+    color: #e4e2d1 !important;
+    margin: 0.5em auto 0.5em auto;
+    padding: 0.5em 1em;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.variachels-journal .highlight::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    margin-right: 0.5em;
+}
+
+.variachels-journal .highlight.information {
+    background: rgba(6, 39, 87, 0.5);
+    border: 1px solid var(--variachels-journal-folder-select-bg-color) !important;
+}
+
+.variachels-journal .highlight.information::before {
+    content: '\f05a';
+    padding: 0 5px 0 0;
+}
+
+.variachels-journal .highlight.warning {
+    background: rgba(156, 109, 0, 0.5);
+    border: 1px solid var(--variachels-journal-button-hover-color) !important;
+}
+
+.variachels-journal .highlight.warning::before {
+    content: '\f071';
+    padding: 0 5px 0 0;
+}
+
+.variachels-journal .highlight.error {
+    background: rgba(67, 0, 6, 0.5);
+    border: 1px solid #b85a5d !important;
+}
+
+.variachels-journal .highlight.error::before {
+    content: '\f06a';
+    padding: 0 5px 0 0;
+}
+
+.variachels-journal .highlight.dark {
+    border: 1px solid rgba(66, 66, 66, 0.5) !important;
+}
+
+.variachels-journal .highlight.dark::before {
+    content: '\f6cf';
+    padding: 0 5px 0 0;
+    color: #bf2e0a;
+}
+
+.variachels-journal figure.right {
+    clear: right;
+    float: right;
+    max-width: 30%;
+    margin: 0 0 10px 10px;
+}
+
+.variachels-journal figure.left {
+    clear: left;
+    float: left;
+    max-width: 30%;
+    margin: 0 0 10px 10px;
+}
+
+/* Background  styling of journal dialog */
+
+button[data-action='createPage'],
+button[data-action='previous'],
+button[data-action='next'] {
+    color: white;
+    background: rgba(214, 150, 0, 0.5);
+    border: 1px solid var(--variachels-journal-button-hover-color);
+    margin: 5rem;
+    width: calc(100% - 10rem);
+    text-shadow: 1px 1px 3px var(--variachels-journal-black);
+}
+
+button[data-action='createPage']:hover,
+button[data-action='previous']:hover,
+button[data-action='next']:hover {
+    box-shadow: 0 0 10px var(--variachels-journal-button-hover-color);
+}
+
+.window-content input[class='title'] {
+    background: var(--variachels-journal-template-header-color);
+    box-shadow: inset 0 0 10px var(--variachels-journal-black);
+    text-shadow: 1px 1px 3px var(--variachels-journal-black);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    color: var(--variachels-journal-header-text-color);
+    font-family: Signika;
+}
+
+.window-content input[class='title']:focus,
+.window-content input[class='title']:hover {
+    box-shadow: 0 0 5px var(--variachels-journal-template-header-color);
+}
+
+.variachels-journal section.secret {
+    color: var(--variachels-journal-template-header-color);
+    background-color: #df94ee20;
+    padding: 10px;
+    border-top-color: #f5cffd60;
+    border-bottom-color: #f5cffd60;
+}
+
+.variachels-journal section.secret::before {
+    content: 'GAMESMASTER ONLY';
+    border: solid 1px orange;
+    border-radius: 2px;
+    font-family: Tiamat;
+    font-size: 16px;
+    padding: 1px 3px 1px 3px;
+    margin-bottom: 0.5em;
+    color: #f92b0b;
+    text-shadow: 1px 1px 1px #00000050;
+    /* background: linear-gradient(to bottom, #e32f0b 38%, #e08216 55%); */
+}
+
+.variachels-journal div.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.125rem;
+}
+
+.variachels-journal div.grid-container.figure {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.variachels-journal div.grid-container.figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.variachels-journal div.macro {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px #000 inset;
+    cursor: pointer;
+}
+
+.variachels-journal .macro.inactive {
+    box-shadow: 0 0 5px #444 inset;
+}
+
+.variachels-journal .macro:hover {
+    box-shadow: 0 0 10px var(--variachels-journal-color-shadow-highlight) inset;
+}
+
+.variachels-journal span[data-tool-tip] {
+    position: relative;
+}
+
+.variachels-journal span[data-tool-tip]::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    content: '\f15c';
+    color: #d29f28;
+    padding: 0 3px 0 2px;
+}
+
+.variachels-journal span[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    padding: 5px;
+    background: var(--variachels-journal-tooltip-background);
+    color: #d29f28;
+    border-radius: 5px;
+    font-size: 1em;
+    white-space: nowrap;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    transition: transform ease-out 500ms, bottom ease-out 500ms;
+}
+
+.variachels-journal span[data-tool-tip]:hover {
+    cursor: pointer;
+}
+
+.variachels-journal span[data-tool-tip]:hover::after {
+    transform: scale(1);
+    bottom: 101%;
+}
+
+.variachels-journal .diamond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top left, #ddd 0%, #fff 100%);
+    text-align: center;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    transition: box-shadow 250ms, transform 250ms;
+    margin: 0.5rem;
+}
+
+.variachels-journal .diamond p {
+    font-weight: bold;
+    transform: rotateZ(-45deg);
+}
+
+.variachels-journal .journal-hint {
+    position: relative;
+    color: var(--variachels-journal-template-header-color);
+}
+
+.variachels-journal .journal-hint::before {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    content: '\f15c';
+    color: #d29f28;
+    padding: 0 8px 0 0;
+}
+
+.variachels-journal .tooltip {
+    position: absolute;
+    z-index: 1;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    background: var(--sanseer-hournals-tooltip-background);
+    opacity: 0;
+    color: #cedfe9;
+    font-size: 0.875rem;
+    transition: opacity 500ms, transform 500ms;
+    top: -10px;
+}
+
+/* Angels of Equilibrium */
+
+.variachels-journal .balance {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #6e6d68;
+    border-radius: 5px;
+    color: #e4e2d1;
+    margin: 0.5em auto 0.5em auto;
+    padding: 0.5em 1em;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.variachels-journal .balance::before,
+.variachels-journal .balance::after {
+    font-family: var(--font-awesome-5);
+    font-weight: 900;
+    margin-right: 0.5em;
+}
+
+.variachels-journal .balance.anodyne {
+    border: 1px solid #ffffff70;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to top left,
+        #00000070 0%,
+        #ffffff25 100%
+    );
+}
+
+.variachels-journal .balance.anodyne::before {
+    content: '\f24e';
+    padding: 0 5px 0 0;
+    text-shadow: 1px 1px 5px #ffffff50;
+}
+
+.variachels-journal .balance.anodyne::after {
+    content: '\f228';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
+
+.variachels-journal .balance.virtue {
+    border: 1px solid #04d50480;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to top left,
+        #00990040 0%,
+        #04f70450 100%
+    );
+}
+
+.variachels-journal .balance.virtue::before {
+    content: '\f516';
+    padding: 0 5px 0 0;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.variachels-journal .balance.virtue::after {
+    content: '\f22a';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
+
+.variachels-journal .balance.dread {
+    border: 1px solid #fc979780;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to top left,
+        #99000040 0%,
+        #f5010150 100%
+    );
+}
+
+.variachels-journal .balance.dread::before {
+    content: '\f515';
+    padding: 0 5px 0 0;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.variachels-journal .balance.dread::after {
+    content: '\f221';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
+
+.variachels-journal .balance.dragon {
+    border: 1px solid #f845196e;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to top left,
+        #bb3d1d40 0%,
+        #ff542950 100%
+    );
+}
+
+.variachels-journal .balance.dragon::before {
+    content: '\f6d5';
+    padding: 0 5px 0 0;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.variachels-journal .balance.dragon::after {
+    content: '\f229';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
+
+.variachels-journal .balance.moon {
+    color: #000000;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top left, #b6b6b660 0%, #fff 100%);
+    text-shadow: 1px 1px 1px #00000050;
+}
+
+.variachels-journal .balance.moon::before {
+    content: '\f186';
+    padding: 0 5px 0 0;
+    color: #000000;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.variachels-journal .balance.moon::after {
+    content: '\f223';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    color: #000000;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
+
+.variachels-journal .balance.sun {
+    color: #000000;
+    border: 1px solid #f9da12;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to top left,
+        #c6b12860 0%,
+        #faee9d80 100%
+    );
+    text-shadow: 1px 1px 1px #00000060;
+}
+
+.variachels-journal .balance.sun::before {
+    content: '\f185';
+    font-size: 1.1rem;
+    padding: 0 5px 0 0;
+    color: #f2d05f;
+    text-shadow: 1px 1px 5px #00000050;
+}
+
+.variachels-journal .balance.sun::after {
+    content: '\f223';
+    font-size: 1.1rem;
+    padding: 0 0 0 5px;
+    color: #000000;
+    text-shadow: 1px 1px 5px #00000040;
+    float: right;
+}
