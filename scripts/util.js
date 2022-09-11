@@ -12,7 +12,7 @@ export function createBaseJournalEntry(title, content) {
         name: title,
         text: {
             content: content,
-            markdwon: '',
+            markdown: '',
             format: 1,
         },
         type: 'text',

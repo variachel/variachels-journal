@@ -47,7 +47,7 @@ Hooks.on('init', (documentTypes) => {
                     {
                         title: game.i18n.localize('variachels-journal.Base'),
                         block: 'div',
-                        classes: 'sanseer-journal',
+                        classes: 'variachels-journal',
                         wrapper: true,
                     },
                     {
@@ -159,6 +159,6 @@ Hooks.once('init', async () => {
 
     if (!game.settings.get('variachels-journal', 'disable-all-styles')) {
         injectCSS()
-        log("Variachel's Journal v2.0.0 | Ready.")
+        log("Variachel's Journal v2.0.1 | Ready.")
     }
 })
