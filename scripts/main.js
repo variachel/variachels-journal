@@ -1,24 +1,5 @@
 import { log } from './util.js'
-
-const debouncedReload = foundry.utils.debounce(
-    () => window.location.reload(),
-    500
-)
-
-function injectCSS() {
-    const head = document.getElementsByTagName('head')[0]
-    const mainCss = buildCSSLink()
-    head.append(mainCss, head.lastChild)
-}
-
-function buildCSSLink() {
-    const mainCss = document.createElement('link')
-    mainCss.setAttribute('rel', 'stylesheet')
-    mainCss.setAttribute('type', 'text/css')
-    mainCss.setAttribute('href', 'modules/variachels-journal/css/styles.css')
-    mainCss.setAttribute('media', 'all')
-    return mainCss
-}
+import { registerSettings } from './settings.js'
 
 Hooks.on('init', (documentTypes) => {
     libWrapper.register(
@@ -45,13 +26,13 @@ Hooks.on('init', (documentTypes) => {
                 title: game.i18n.localize('variachels-journal.JournalStyles'),
                 items: [
                     {
-                        title: game.i18n.localize('variachels-journal.Base'),
+                        title: game.i18n.localize('VariachelsJournal.Base'),
                         block: 'div',
                         classes: 'variachels-journal',
                         wrapper: true,
                     },
                     {
-                        title: game.i18n.localize('variachels-journal.Header'),
+                        title: game.i18n.localize('VariachelsJournal.Header'),
                         block: 'div',
                         classes: 'journal-header',
                         wrapper: true,
@@ -64,7 +45,7 @@ Hooks.on('init', (documentTypes) => {
                     },
                     {
                         title: game.i18n.localize(
-                            'variachels-journal.ImageWrapper'
+                            'VariachelsJournal.ImageWrapper'
                         ),
                         block: 'div',
                         classes: 'journal-image-margin',
@@ -72,58 +53,54 @@ Hooks.on('init', (documentTypes) => {
                     },
                     {
                         title: game.i18n.localize(
-                            'variachels-journal.CharacterImage'
+                            'VariachelsJournal.CharacterImage'
                         ),
                         block: 'img',
                         classes: 'journal-image',
                         wrapper: false,
                     },
                     {
-                        title: game.i18n.localize(
-                            'variachels-journal.Centered'
-                        ),
+                        title: game.i18n.localize('VariachelsJournal.Centered'),
                         block: 'div',
                         classes: 'centered',
                         wrapper: false,
                     },
                     {
                         title: game.i18n.localize(
-                            'variachels-journal.CircleImage'
+                            'VariachelsJournal.CircleImage'
                         ),
                         block: 'img',
                         classes: 'journal-image-circle',
                         wrapper: false,
                     },
                     {
-                        title: game.i18n.localize(
-                            'variachels-journal.4ColGrid'
-                        ),
+                        title: game.i18n.localize('VariachelsJournal.4ColGrid'),
                         block: 'div',
                         classes: 'grid-container',
                         wrapper: false,
                     },
                     {
                         title: game.i18n.localize(
-                            'variachels-journal.Information'
+                            'VariachelsJournal.Information'
                         ),
                         block: 'div',
                         classes: 'highlight information',
                         wrapper: false,
                     },
                     {
-                        title: game.i18n.localize('variachels-journal.Warning'),
+                        title: game.i18n.localize('VariachelsJournal.Warning'),
                         block: 'div',
                         classes: 'highlight warning',
                         wrapper: false,
                     },
                     {
-                        title: game.i18n.localize('variachels-journal.Error'),
+                        title: game.i18n.localize('VariachelsJournal.Error'),
                         block: 'div',
                         classes: 'highlight error',
                         wrapper: false,
                     },
                     {
-                        title: game.i18n.localize('variachels-journal.Dark'),
+                        title: game.i18n.localize('VariachelsJournal.Dark'),
                         block: 'div',
                         classes: 'highlight dark',
                         wrapper: false,
@@ -136,29 +113,11 @@ Hooks.on('init', (documentTypes) => {
         'WRAPPER'
     )
 
-    /*
-        Error occurs without the game.ready check, however, the game is NOT ready at the point of calling the updateDefaultSheets.
-        The following code therefore is placing an empty object in the sheets. Which, in fact, the call to Journal.registerSheet() already does
-    */
     const settings = game.ready ? game.settings.get('core', 'sheetClasses') : {}
     DocumentSheetConfig.updateDefaultSheets(settings)
 })
 
 Hooks.once('init', async () => {
-    game.settings.register('variachels-journal', 'disable-all-styles', {
-        name: 'Disable all styles?',
-        hint: 'Remove all journal styling.',
-        scope: 'client',
-        type: Boolean,
-        default: false,
-        config: true,
-        onChange: () => {
-            debouncedReload()
-        },
-    })
-
-    if (!game.settings.get('variachels-journal', 'disable-all-styles')) {
-        injectCSS()
-        log("Variachel's Journal v2.0.1 | Ready.")
-    }
+    registerSettings()
+    log("Variachel's Journal v2.1.0 | Ready.")
 })

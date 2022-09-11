@@ -1,7 +1,7 @@
 {
     "title": "Variachel's Journal",
     "description": "Custom journals for the world of Ash Keron",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "authors": [
         {
             "name": "variachel",
@@ -34,5 +34,5 @@
     },
     "url": "https://github.com/variachel/variachels-journal",
     "manifest": "https://github.com/variachel/variachels-journal/releases/latest/download/module.json",
-    "download": "https://github.com/variachel/variachels-journal/archive/v2.0.1.zip"
+    "download": "https://github.com/variachel/variachels-journal/archive/v2.1.0.zip"
 }

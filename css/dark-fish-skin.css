@@ -1,0 +1,41 @@
+.sheet.journal-entry .journal-entry-content {
+    background: url('../textures/dark-fish-skin.png') repeat;
+}
+
+.variachels-journal h1,
+.variachels-journal h2,
+.variachels-journal h3,
+.variachels-journal h4 {
+    color: #f34d1f;
+}
+
+.variachels-journal .journal-content {
+    color: var(--variachels-journal-template-body-color);
+}
+
+.variachels-journal hr.vari {
+    color: var(--variachels-journal-template-body-color);
+    border-top: medium double var(--variachels-journal-template-body-color);
+}
+
+.variachels-journal li {
+    color: var(--variachels-journal-template-body-color);
+}
+
+.variachels-journal ul li::before {
+    color: #ebdc35;
+}
+
+.variachels-journal a.content-link,
+.variachels-journal a.content-link {
+    color: var(--variachels-journal-template-body-color);
+}
+
+.variachels-journal section.secret {
+    color: var(--variachels-journal-template-body-color);
+}
+
+.variachels-journal .journal-hint {
+    position: relative;
+    color: var(--variachels-journal-template-body-color);
+}
