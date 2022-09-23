@@ -1,3 +1,13 @@
+## Version 2.2.0
+
+Removed libWrapper dependency
+Updated the journal header styling
+Updated settings.js for efficiency
+Updated journal image borders to be gradients
+Removed extra border from painting / place preview image styling
+Updated angel indicator borders, colours and margins
+Updated the journal content border and margin
+
 ## Version 2.1.0
 
 Further updates and refinements to the CSS

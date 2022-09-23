@@ -1,8 +1,6 @@
-import { log } from './util.js'
+import { VariachelsJournal } from './main.js'
 
 export const registerSettings = function () {
-    let modulename = 'variachels-journal'
-
     const debouncedReload = foundry.utils.debounce(function () {
         window.location.reload()
     }, 100)
@@ -29,7 +27,7 @@ export const registerSettings = function () {
         'white-waves': game.i18n.localize('VariachelsJournal.white-waves'),
     }
 
-    game.settings.register(modulename, 'disable-all-styles', {
+    game.settings.register(VariachelsJournal.modulename, 'disable-all-styles', {
         name: game.i18n.localize('VariachelsJournal.disable-all-styling'),
         hint: game.i18n.localize('VariachelsJournal.disable-all-styling-hint'),
         scope: 'client',
@@ -39,34 +37,39 @@ export const registerSettings = function () {
         onChange: debouncedReload,
     })
 
-    const stylesDisabled = game.settings.get(modulename, 'disable-all-styles')
+    const stylesDisabled = game.settings.get(
+        VariachelsJournal.modulename,
+        'disable-all-styles'
+    )
 
     if (!stylesDisabled) {
-        injectCSS()
+        injectCustomCSS(buildMainCSS())
     }
 
-    game.settings.register(modulename, 'journal-background', {
+    game.settings.register(VariachelsJournal.modulename, 'journal-background', {
         name: game.i18n.localize('VariachelsJournal.change-background'),
         hint: game.i18n.localize('VariachelsJournal.change-background-hint'),
         scope: 'client',
         config: true,
-        default: 'grunge',
+        default: 'egg-shell',
         choices: backgroundOptions,
         type: String,
         onChange: debouncedReload,
     })
 
-    const background = game.settings.get(modulename, 'journal-background')
+    const background = game.settings.get(
+        VariachelsJournal.modulename,
+        'journal-background'
+    )
 
     if (!stylesDisabled && background) {
-        injectBackgroundCSS(background)
+        injectCustomCSS(buildBackgroundCSS(background))
     }
 }
 
-function injectCSS() {
+function injectCustomCSS(customCss) {
     const head = document.getElementsByTagName('head')[0]
-    const mainCss = buildMainCSS()
-    head.append(mainCss, head.lastChild)
+    head.append(customCss, head.lastChild)
 }
 
 function buildMainCSS() {
@@ -76,12 +79,6 @@ function buildMainCSS() {
     mainCss.setAttribute('href', 'modules/variachels-journal/css/styles.css')
     mainCss.setAttribute('media', 'all')
     return mainCss
-}
-
-function injectBackgroundCSS(bgStyle) {
-    const head = document.getElementsByTagName('head')[0]
-    const mainCss = buildBackgroundCSS(bgStyle)
-    head.append(mainCss, head.lastChild)
 }
 
 function buildBackgroundCSS(bgStyle) {

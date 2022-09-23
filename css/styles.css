@@ -1,7 +1,7 @@
 :root {
     --variachels-journal-black: #000000;
     --variachels-journal-text-shadow: #00000090;
-    --variachels-journal-image-shadow: #808080;
+    --variachels-journal-image-shadow: #080808;
     --variachels-journal-template-header-color: #363532;
     --variachels-journal-template-body-color: #ecebe8;
     --variachels-journal-button-hover-color: #d69e07;
@@ -45,6 +45,8 @@
     border: 1px solid #555;
     box-shadow: 0 0 2px var(--variachels-journal-black);
     margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    margin-left: 0.2rem;
 }
 
 .variachels-journal blockquote {
@@ -154,8 +156,16 @@
 }
 
 .variachels-journal .journal-image {
+    border: double 2px transparent;
     border-radius: 50%;
-    border: 2px solid black;
+    background-image: linear-gradient(white, white),
+        radial-gradient(
+            circle at top left,
+            rgb(248, 198, 34),
+            rgb(174, 130, 10)
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     box-shadow: 0 0 12px var(--variachels-journal-image-shadow);
     margin: 0.5rem;
 }
@@ -167,8 +177,8 @@
 
 .variachels-journal .journal-image-places {
     border-radius: 10px;
-    border: 2px solid black;
     box-shadow: 0 0 12px var(--variachels-journal-image-shadow);
+    margin: 0.5rem;
 }
 
 .variachels-journal .journal-image-margin-places {
@@ -267,7 +277,7 @@
 }
 
 .variachels-journal .highlight.information {
-    background: rgba(6, 39, 87, 0.5);
+    background: rgba(6, 39, 87, 0.7);
     border: 1px solid var(--variachels-journal-folder-select-bg-color) !important;
 }
 
@@ -277,7 +287,7 @@
 }
 
 .variachels-journal .highlight.warning {
-    background: rgba(156, 109, 0, 0.5);
+    background: rgba(156, 109, 0, 0.7);
     border: 1px solid var(--variachels-journal-button-hover-color) !important;
 }
 
@@ -287,7 +297,7 @@
 }
 
 .variachels-journal .highlight.error {
-    background: rgba(67, 0, 6, 0.5);
+    background: rgba(67, 0, 6, 0.7);
     border: 1px solid #b85a5d !important;
 }
 
@@ -297,7 +307,7 @@
 }
 
 .variachels-journal .highlight.dark {
-    border: 1px solid rgba(66, 66, 66, 0.5) !important;
+    border: 1px solid rgba(66, 66, 66, 0.7) !important;
 }
 
 .variachels-journal .highlight.dark::before {
@@ -307,8 +317,17 @@
 }
 
 .variachels-journal figure img {
+    border: double 1px transparent;
     border-radius: 10px;
-    border: 2px solid black;
+    background-image: linear-gradient(white, white),
+        radial-gradient(
+            circle at top left,
+            rgb(248, 198, 34),
+            rgb(248, 198, 34)
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
     box-shadow: 0 0 12px var(--variachels-journal-image-shadow);
 }
 
@@ -367,6 +386,23 @@ a[data-action='toggleCollapse'] {
 .window-content input[placeholder='Search Pages']:focus,
 .window-content input[placeholder='Search Pages']:hover {
     box-shadow: 0 0 5px var(--variachels-journal-template-header-color);
+}
+
+.window-content header[class='journal-page-header'] {
+    color: var(--variachels-journal-template-header-color);
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--variachels-journal-black);
+    box-shadow: 0 0 3px rgb(208, 208, 208) inset;
+    margin-bottom: 0.5rem;
+    margin-inline: auto;
+}
+
+.window-content header[class='journal-page-header'] h1 {
+    border: 0;
+    color: white;
+    margin: 0;
+    text-shadow: 0 0 5px var(--variachels-journal-text-shadow);
 }
 
 .variachels-journal section.secret {
@@ -508,7 +544,7 @@ a[data-action='toggleCollapse'] {
 /* Angels of Equilibrium */
 
 .variachels-journal .balance {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     border: 1px solid #6e6d68;
     border-radius: 5px;
     color: #e4e2d1;
@@ -526,12 +562,14 @@ a[data-action='toggleCollapse'] {
 
 .variachels-journal .balance.anodyne {
     border: 1px solid #ffffff70;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top left,
-        #00000070 0%,
-        #ffffff25 100%
+        #00000050 0%,
+        #ffffff99 100%
     );
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.anodyne::before {
@@ -550,12 +588,14 @@ a[data-action='toggleCollapse'] {
 
 .variachels-journal .balance.virtue {
     border: 1px solid #04d50480;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top left,
-        #00990040 0%,
-        #04f70450 100%
+        #00990099 0%,
+        #04f70499 100%
     );
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.virtue::before {
@@ -574,12 +614,14 @@ a[data-action='toggleCollapse'] {
 
 .variachels-journal .balance.dread {
     border: 1px solid #fc979780;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top left,
-        #99000040 0%,
-        #f5010150 100%
+        #99000099 0%,
+        #f5010199 100%
     );
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.dread::before {
@@ -598,12 +640,14 @@ a[data-action='toggleCollapse'] {
 
 .variachels-journal .balance.dragon {
     border: 1px solid #f845196e;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top left,
-        #bb3d1d40 0%,
-        #ff542950 100%
+        #bb3d1d99 0%,
+        #ff542999 100%
     );
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.dragon::before {
@@ -623,9 +667,11 @@ a[data-action='toggleCollapse'] {
 .variachels-journal .balance.moon {
     color: #000000;
     border: 1px solid #fff;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(to top left, #b6b6b660 0%, #fff 100%);
     text-shadow: 1px 1px 1px #00000050;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.moon::before {
@@ -647,13 +693,15 @@ a[data-action='toggleCollapse'] {
 .variachels-journal .balance.sun {
     color: #000000;
     border: 1px solid #f9da12;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(
         to top left,
-        #c6b12860 0%,
-        #faee9d80 100%
+        #c6b12899 0%,
+        #faee9d99 100%
     );
     text-shadow: 1px 1px 1px #00000060;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .variachels-journal .balance.sun::before {
