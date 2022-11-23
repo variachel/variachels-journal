@@ -9,6 +9,8 @@
     --variachels-journal-header-text-color: #696969;
     --variachels-journal-tooltip-background: #29343d;
     --variachels-journal-color-shadow-highlight: #ffa500;
+    --variachels-journal-border-highlight: #ff0000;
+    --variachels-journal-border-highlight-shadow: #a35303;
 
     --font-awesome: 'Font Awesome 6 Pro';
     --font-awesome-5: 'Font Awesome 5 Free';

@@ -6,3 +6,7 @@ export function log(logSubject) {
 export function error(errorTxt) {
     console.error(errorTxt)
 }
+
+export let i18n = (key) => {
+    return game.i18n.localize(key)
+}

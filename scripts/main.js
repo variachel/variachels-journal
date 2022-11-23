@@ -1,23 +1,23 @@
-import { log } from './util.js'
 import { VariachelsJournalSheet } from './editor.js'
 import { registerSettings } from './settings.js'
+import { i18n, log } from './util.js'
 
 export class VariachelsJournal {
     static modulename = 'variachels-journal'
 }
 
-// DocumentSheetConfig.registerSheet(
-//     JournalEntryPage,
-//     VariachelsJournal.modulename,
-//     VariachelsJournalSheet,
-//     {
-//         types: ['text'],
-//         makeDefault: true,
-//         label: 'Varis Editor',
-//     }
-// )
-
-Hooks.once('init', async () => {
+Hooks.on('init', async () => {
+    Journal.registerSheet(
+        VariachelsJournal.modulename,
+        VariachelsJournalSheet,
+        {
+            makeDefault: true,
+            label: i18n('VariachelsJournal.sheet-label'),
+        }
+    )
     registerSettings()
-    log("Variachel's Journal v2.3.0 | Ready.")
+})
+
+Hooks.once('ready', async () => {
+    log("Variachel's Journal v2.4.0 | Ready.")
 })

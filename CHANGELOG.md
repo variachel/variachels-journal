@@ -1,3 +1,11 @@
+## Version 2.4.0
+
+-   Updated to add own journal sheet.
+-   Updated egg-shell css (added background to dialogs etc. some still to do).
+-   Updated localisation.
+-   Updated when call to log as ready is made.
+-   Updated settings to be scpoed to world rather than client.
+
 ## Version 2.3.0
 
 -   Removed libWrapper dependency.

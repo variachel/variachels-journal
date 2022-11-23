@@ -1,4 +1,5 @@
 import { VariachelsJournal } from './main.js'
+import { i18n } from './util.js'
 
 export const registerSettings = function () {
     const debouncedReload = foundry.utils.debounce(function () {
@@ -6,31 +7,25 @@ export const registerSettings = function () {
     }, 100)
 
     let backgroundOptions = {
-        cobblestone: game.i18n.localize('VariachelsJournal.cobblestone'),
-        'dark-fish-skin': game.i18n.localize(
-            'VariachelsJournal.dark-fish-skin'
-        ),
-        'egg-shell': game.i18n.localize('VariachelsJournal.egg-shell'),
-        grunge: game.i18n.localize('VariachelsJournal.grunge'),
-        hexellence: game.i18n.localize('VariachelsJournal.hexellence'),
-        'little-plusses': game.i18n.localize(
-            'VariachelsJournal.little-plusses'
-        ),
-        'mocha-grunge': game.i18n.localize('VariachelsJournal.mocha-grunge'),
-        'old-moon': game.i18n.localize('VariachelsJournal.old-moon'),
-        paper: game.i18n.localize('VariachelsJournal.paper'),
-        sandpaper: game.i18n.localize('VariachelsJournal.sandpaper'),
-        'squared-metal': game.i18n.localize('VariachelsJournal.squared-metal'),
-        'vintage-concrete': game.i18n.localize(
-            'VariachelsJournal.vintage-concrete'
-        ),
-        'white-waves': game.i18n.localize('VariachelsJournal.white-waves'),
+        cobblestone: i18n('VariachelsJournal.cobblestone'),
+        'dark-fish-skin': i18n('VariachelsJournal.dark-fish-skin'),
+        'egg-shell': i18n('VariachelsJournal.egg-shell'),
+        grunge: i18n('VariachelsJournal.grunge'),
+        hexellence: i18n('VariachelsJournal.hexellence'),
+        'little-plusses': i18n('VariachelsJournal.little-plusses'),
+        'mocha-grunge': i18n('VariachelsJournal.mocha-grunge'),
+        'old-moon': i18n('VariachelsJournal.old-moon'),
+        paper: i18n('VariachelsJournal.paper'),
+        sandpaper: i18n('VariachelsJournal.sandpaper'),
+        'squared-metal': i18n('VariachelsJournal.squared-metal'),
+        'vintage-concrete': i18n('VariachelsJournal.vintage-concrete'),
+        'white-waves': i18n('VariachelsJournal.white-waves'),
     }
 
     game.settings.register(VariachelsJournal.modulename, 'disable-all-styles', {
-        name: game.i18n.localize('VariachelsJournal.disable-all-styling'),
-        hint: game.i18n.localize('VariachelsJournal.disable-all-styling-hint'),
-        scope: 'client',
+        name: i18n('VariachelsJournal.disable-all-styling'),
+        hint: i18n('VariachelsJournal.disable-all-styling-hint'),
+        scope: 'world',
         type: Boolean,
         default: false,
         config: true,
@@ -47,9 +42,9 @@ export const registerSettings = function () {
     }
 
     game.settings.register(VariachelsJournal.modulename, 'journal-background', {
-        name: game.i18n.localize('VariachelsJournal.change-background'),
-        hint: game.i18n.localize('VariachelsJournal.change-background-hint'),
-        scope: 'client',
+        name: i18n('VariachelsJournal.change-background'),
+        hint: i18n('VariachelsJournal.change-background-hint'),
+        scope: 'world',
         config: true,
         default: 'egg-shell',
         choices: backgroundOptions,
@@ -82,13 +77,13 @@ function buildMainCSS() {
 }
 
 function buildBackgroundCSS(bgStyle) {
-    const mainCss = document.createElement('link')
-    mainCss.setAttribute('rel', 'stylesheet')
-    mainCss.setAttribute('type', 'text/css')
-    mainCss.setAttribute(
+    const backgroundCss = document.createElement('link')
+    backgroundCss.setAttribute('rel', 'stylesheet')
+    backgroundCss.setAttribute('type', 'text/css')
+    backgroundCss.setAttribute(
         'href',
         'modules/variachels-journal/css/' + bgStyle + '.css'
     )
-    mainCss.setAttribute('media', 'all')
-    return mainCss
+    backgroundCss.setAttribute('media', 'all')
+    return backgroundCss
 }
