@@ -1,10 +1,16 @@
+## Version 2.4.5
+
+-   Updated the backgrounds of dialogs etc to be consistent when egg-shell selected.
+-   Made the css in relation to the above more efficient
+-   Updated the tooltip border to be consistent with PF2e tooltips
+
 ## Version 2.4.0
 
 -   Updated to add own journal sheet.
 -   Updated egg-shell css (added background to dialogs etc. some still to do).
 -   Updated localisation.
 -   Updated when call to log as ready is made.
--   Updated settings to be scpoed to world rather than client.
+-   Updated settings to be scoped to world rather than client.
 
 ## Version 2.3.0
 
