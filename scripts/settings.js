@@ -29,7 +29,7 @@ export const registerSettings = function () {
         type: Boolean,
         default: false,
         config: true,
-        onChange: debouncedReload,
+        requiresReload: true,
     })
 
     const stylesDisabled = game.settings.get(
@@ -38,7 +38,7 @@ export const registerSettings = function () {
     )
 
     if (!stylesDisabled) {
-        injectCustomCSS(buildMainCSS())
+        injectCustomCSS(buildCSS('styles'))
     }
 
     game.settings.register(VariachelsJournal.modulename, 'journal-background', {
@@ -49,7 +49,8 @@ export const registerSettings = function () {
         default: 'egg-shell',
         choices: backgroundOptions,
         type: String,
-        onChange: debouncedReload,
+        // onChange: debouncedReload,
+        requiresReload: true,
     })
 
     const background = game.settings.get(
@@ -58,7 +59,7 @@ export const registerSettings = function () {
     )
 
     if (!stylesDisabled && background) {
-        injectCustomCSS(buildBackgroundCSS(background))
+        injectCustomCSS(buildCSS(background))
     }
 }
 
@@ -67,23 +68,11 @@ function injectCustomCSS(customCss) {
     head.append(customCss, head.lastChild)
 }
 
-function buildMainCSS() {
-    const mainCss = document.createElement('link')
-    mainCss.setAttribute('rel', 'stylesheet')
-    mainCss.setAttribute('type', 'text/css')
-    mainCss.setAttribute('href', 'modules/variachels-journal/css/styles.css')
-    mainCss.setAttribute('media', 'all')
-    return mainCss
-}
-
-function buildBackgroundCSS(bgStyle) {
-    const backgroundCss = document.createElement('link')
-    backgroundCss.setAttribute('rel', 'stylesheet')
-    backgroundCss.setAttribute('type', 'text/css')
-    backgroundCss.setAttribute(
-        'href',
-        'modules/variachels-journal/css/' + bgStyle + '.css'
-    )
-    backgroundCss.setAttribute('media', 'all')
-    return backgroundCss
+function buildCSS(style) {
+    const css = document.createElement('link')
+    css.setAttribute('rel', 'stylesheet')
+    css.setAttribute('type', 'text/css')
+    css.setAttribute('href', 'modules/variachels-journal/css/' + style + '.css')
+    css.setAttribute('media', 'all')
+    return css
 }

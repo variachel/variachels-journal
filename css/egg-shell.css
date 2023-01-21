@@ -82,3 +82,7 @@
 .sheet.journal-entry .journal-entry-content {
     background: url('../textures/egg-shell.png') repeat;
 }
+
+.chat-message.message {
+    background: url('../textures/egg-shell.png') repeat;
+}

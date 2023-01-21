@@ -494,6 +494,7 @@ a[data-action='toggleCollapse'] {
     color: #fff;
 
     /******* From PF2e Game System ***********/
+
     background-color: var(--variachels-journal-tooltip-background);
     border-image-outset: 0;
     border-image: url(../assets/corner-box.webp) 9 repeat;
@@ -504,6 +505,7 @@ a[data-action='toggleCollapse'] {
     max-width: fit-content;
     min-width: 120px;
     padding: 4px;
+
     /*****************************************/
 
     width: fit-content;

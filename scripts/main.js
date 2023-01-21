@@ -19,5 +19,5 @@ Hooks.on('init', async () => {
 })
 
 Hooks.once('ready', async () => {
-    log("Variachel's Journal v2.4.5 | Ready.")
+    log("Variachel's Journal v2.4.6 | Ready.")
 })

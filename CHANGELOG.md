@@ -1,3 +1,9 @@
+## Version 2.4.6
+
+-   Updated CSS styling for chat messages
+-   Streamlined settings code
+-
+
 ## Version 2.4.5
 
 -   Updated the backgrounds of dialogs etc to be consistent when egg-shell selected.
