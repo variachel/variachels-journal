@@ -1,3 +1,7 @@
+## Version 2.5.0
+
+-   Tidied up issues with CSS code
+
 ## Version 2.4.6
 
 -   Updated CSS styling for chat messages

@@ -15,7 +15,9 @@
     --font-awesome: 'Font Awesome 6 Pro';
     --font-awesome-5: 'Font Awesome 5 Free';
 
-    font-family: Signika;
+    --base-font-signika: Signika, serif;
+    --base-font-tiamat: Tiamat;
+
     font-size: 14px;
 }
 
@@ -48,7 +50,6 @@
     box-shadow: 0 0 2px var(--variachels-journal-black);
     margin-bottom: 0.5rem;
     margin-left: 0.2rem;
-    margin-left: 0.2rem;
 }
 
 .variachels-journal blockquote {
@@ -59,7 +60,6 @@
     position: relative;
     padding-right: 0.3rem;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
 }
 
 .variachels-journal blockquote::after {
@@ -107,7 +107,7 @@
     background-color: transparent;
     border-spacing: 5px;
     color: var(--variachels-journal-template-header-color);
-    font-family: Signika;
+    font-family: var(--base-font-signika);
     text-align: justify;
 }
 
@@ -201,11 +201,10 @@
 
 .variachels-journal .centered {
     display: block;
-    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
+    margin: 0 -50% 0 0;
     transform: translate(-50%, -50%);
 }
 
@@ -383,7 +382,7 @@ a[data-action='toggleCollapse'] {
     color: var(--variachels-journal-header-text-color);
     box-shadow: inset 0 0 10px var(--variachels-journal-black);
     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-    font-family: Signika;
+    font-family: var(--base-font-signika);
 }
 
 .window-content input[class='title']:focus,
@@ -425,7 +424,7 @@ a[data-action='toggleCollapse'] {
     content: 'GAMESMASTER ONLY';
     border: solid 1px orange;
     border-radius: 2px;
-    font-family: Tiamat;
+    font-family: var(--base-font-tiamat);
     font-size: 16px;
     padding: 1px 3px 1px 3px;
     margin-bottom: 0.5em;
@@ -496,7 +495,7 @@ a[data-action='toggleCollapse'] {
     /******* From PF2e Game System ***********/
 
     background-color: var(--variachels-journal-tooltip-background);
-    border-image-outset: 0;
+    /*border-image-outset: 0;*/
     border-image: url(../assets/corner-box.webp) 9 repeat;
     border-style: solid;
     border-width: 9px;
@@ -509,8 +508,8 @@ a[data-action='toggleCollapse'] {
     /*****************************************/
 
     width: fit-content;
-    bottom: 100%;
-    left: 50%;
+    /*bottom: 100%;*/
+    /*left: 50%;*/
     margin-left: -200%;
 
     border-radius: 5px;

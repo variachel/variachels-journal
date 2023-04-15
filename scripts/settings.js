@@ -22,7 +22,7 @@ export const registerSettings = function () {
         'white-waves': i18n('VariachelsJournal.white-waves'),
     }
 
-    game.settings.register(VariachelsJournal.modulename, 'disable-all-styles', {
+    game.settings.register(VariachelsJournal._moduleName, 'disable-all-styles', {
         name: i18n('VariachelsJournal.disable-all-styling'),
         hint: i18n('VariachelsJournal.disable-all-styling-hint'),
         scope: 'world',
@@ -33,7 +33,7 @@ export const registerSettings = function () {
     })
 
     const stylesDisabled = game.settings.get(
-        VariachelsJournal.modulename,
+        VariachelsJournal._moduleName,
         'disable-all-styles'
     )
 
@@ -41,7 +41,7 @@ export const registerSettings = function () {
         injectCustomCSS(buildCSS('styles'))
     }
 
-    game.settings.register(VariachelsJournal.modulename, 'journal-background', {
+    game.settings.register(VariachelsJournal._moduleName, 'journal-background', {
         name: i18n('VariachelsJournal.change-background'),
         hint: i18n('VariachelsJournal.change-background-hint'),
         scope: 'world',
@@ -54,7 +54,7 @@ export const registerSettings = function () {
     })
 
     const background = game.settings.get(
-        VariachelsJournal.modulename,
+        VariachelsJournal._moduleName,
         'journal-background'
     )
 
