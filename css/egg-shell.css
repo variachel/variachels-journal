@@ -2,11 +2,19 @@
     display: none;
 }
 
-.sheet.item .window-content input[placeholder='Name']:focus,
-.sheet.item .window-content input[data-property='system.level.value']:focus {
-    border: 1px solid var(--variachels-journal-border-highlight);
-    box-shadow: 0 0 5px var(--variachels-journal-border-highlight-shadow) !important;
+.sheet.journal-entry .journal-entry-content {
+    background: url('../textures/egg-shell.png') repeat !important;
 }
+
+.chat-message.message {
+    background: url('../textures/egg-shell.png') repeat !important;
+}
+
+/*.sheet.item .window-content input[placeholder='Name']:focus,*/
+/*.sheet.item .window-content input[data-property='system.level.value']:focus {*/
+/*    border: 1px solid var(--variachels-journal-border-highlight);*/
+/*    box-shadow: 0 0 5px var(--variachels-journal-border-highlight-shadow) !important;*/
+/*}*/
 
 /* .app.window-app.dialog .window-content {
     background: url('../textures/egg-shell.png') repeat;
@@ -53,36 +61,28 @@
 }
 */
 
-.app.window-app:not(.journal-sheet) .window-content .directory-item {
-    background-color: #6b6b6b1f;
-    margin-bottom: 0.15rem;
-    border-radius: 3px;
-    border: solid 0.5px #6b6b6ba5;
-}
+/*.app.window-app:not(.journal-sheet) .window-content .directory-item {*/
+/*    background-color: #6b6b6b1f;*/
+/*    margin-bottom: 0.15rem;*/
+/*    border-radius: 3px;*/
+/*    border: solid 0.5px #6b6b6ba5;*/
+/*}*/
 
-.app.window-app:not(.items-sidebar):not(.macros-sidebar):not(
-        .scenes-sidebar
-    ):not(.combat-sidebar):not(.chat-sidebar):not(.journal-sidebar):not(
-        .tables-sidebar
-    ):not(.cards-sidebar):not(.playlists-sidebar):not(.compendium-sidebar):not(
-        .settings-sidebar
-    ):not(.journal-sheet)
-    .window-content {
-    background: url('../textures/egg-shell.png') repeat;
-}
+/*.app.window-app:not(.items-sidebar):not(.macros-sidebar):not(*/
+/*        .scenes-sidebar*/
+/*    ):not(.combat-sidebar):not(.chat-sidebar):not(.journal-sidebar):not(*/
+/*        .tables-sidebar*/
+/*    ):not(.cards-sidebar):not(.playlists-sidebar):not(.compendium-sidebar):not(*/
+/*        .settings-sidebar*/
+/*    ):not(.journal-sheet)*/
+/*    .window-content {*/
+/*    background: url('../textures/egg-shell.png') repeat;*/
+/*}*/
 
-.app.window-app.actor.character .window-content .sheet-body {
-    background: url('../textures/egg-shell.png') repeat;
-}
+/*.app.window-app.actor.character .window-content .sheet-body {*/
+/*    background: url('../textures/egg-shell.png') repeat;*/
+/*}*/
 
-.app.window-app.actor .window-content .image-container {
-    border: none;
-}
-
-.sheet.journal-entry .journal-entry-content {
-    background: url('../textures/egg-shell.png') repeat;
-}
-
-.chat-message.message {
-    background: url('../textures/egg-shell.png') repeat;
-}
+/*.app.window-app.actor .window-content .image-container {*/
+/*    border: none;*/
+/*}*/

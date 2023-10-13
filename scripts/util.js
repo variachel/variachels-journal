@@ -3,8 +3,8 @@ export function log(logSubject) {
     console.log(logSubject)
 }
 
-export function error(errorTxt) {
-    console.error(errorTxt)
+export function error(errorText) {
+    console.error(errorText)
 }
 
 export let i18n = (key) => {
