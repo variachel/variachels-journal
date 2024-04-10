@@ -1,12 +1,12 @@
 .sheet.journal-entry .journal-entry-content {
-    background: url('../textures/dark-fish-skin.png') repeat;
+    background: url('../textures/dark-fish-skin.png') repeat !important;
 }
 
 .variachels-journal h1,
 .variachels-journal h2,
 .variachels-journal h3,
 .variachels-journal h4 {
-    color: #f34d1f;
+    color: #f34d1f !important;
 }
 
 .variachels-journal .journal-content {

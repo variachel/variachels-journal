@@ -1,3 +1,33 @@
 .sheet.journal-entry .journal-entry-content {
-    background: url('../textures/grunge.png') repeat;
+    background: url('../textures/grunge.png') repeat !important;
+}
+
+.journal-page-header h1 {
+    color: #383636 !important;
+    text-shadow: 0 0 5px var(--variachels-journal-header-text-color) !important;
+}
+
+.variachels-journal h1,
+.variachels-journal h2,
+.variachels-journal h3,
+.variachels-journal h4 {
+    color: #383636 !important;
+    text-shadow: 0 0 5px var(--variachels-journal-header-text-color) !important;
+}
+
+.journal-page-content h1,
+.journal-page-content h2,
+.journal-page-content h3,
+.journal-page-content h4 {
+    color: #383636 !important;
+    text-shadow: 0 0 5px var(--variachels-journal-header-text-color) !important;
+}
+
+.journal-header input.title {
+    color: #383636 !important;
+    text-shadow: 0 0 5px var(--variachels-journal-header-text-color) !important;
+}
+
+input[type="search"] {
+    color: #383636 !important;
 }
