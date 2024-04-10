@@ -133,7 +133,6 @@
 .variachels-journal h3,
 .variachels-journal h4 {
     border: 0;
-    /* color: #f34d1f; */
     color: white;
     margin: 0;
     text-shadow: 0 0 5px var(--variachels-journal-text-shadow);
