@@ -4,6 +4,11 @@
 
 .sheet.journal-entry .journal-entry-content {
     background: url('../textures/egg-shell.png') repeat !important;
+    color: var(--variachels-journal-template-header-color) !important;
+
+    a.content-link {
+        color: var(--variachels-journal-template-header-color) !important;
+    }
 }
 
 .chat-message.message {

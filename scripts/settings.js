@@ -1,5 +1,5 @@
-import { VariachelsJournal } from './main.js'
-import { i18n } from './util.js'
+import {VariachelsJournal} from './main.js'
+import {i18n} from './util.js'
 
 export const registerSettings = function () {
     const debouncedReload = foundry.utils.debounce(function () {
@@ -49,8 +49,7 @@ export const registerSettings = function () {
         default: 'egg-shell',
         choices: backgroundOptions,
         type: String,
-        // onChange: debouncedReload,
-        requiresReload: true,
+        requiresReload: true
     })
 
     const background = game.settings.get(
