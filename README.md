@@ -3,7 +3,7 @@
 Styling for Variachel's Journal
 
 <div>
-	<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fversion%3FnameType%3Dstyle%3Dflat-square%26url%3Dhttps%3A%2F%2Fgithub.com%2Fvariachel%2Fvariachels-journal%2Freleases%2Flatest%2Fdownload%2Fmodule.json" alt="">
+	<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fversion%3Fstyle%3Dflat%26url%3Dhttps%3A%2F%2Fgithub.com%2Fvariachel%2Fvariachels-journal%2Freleases%2Fdownload%2Fv13.0.0%2Fmodule.json" alt="">
 	<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fsystem%3FnameType%3Dfull%26url%3Dhttps%3A%2F%2Fimg.shields.io%2Fendpoint%3Furl%3Dhttps%3A%2F%2Ffoundryshields.com%2Fversion%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fvariachel%252Fvariachels-journal%252Freleases%252Flatest%252Fdownload%252Fmodule.json" alt="">
 </div>
 
