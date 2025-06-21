@@ -32,5 +32,34 @@
     "VariachelsJournal.sandpaper": "Sandpaper",
     "VariachelsJournal.squared-metal": "Squared Metal",
     "VariachelsJournal.vintage-concrete": "Vintage Concrete",
-    "VariachelsJournal.white-waves": "White Waves"
+    "VariachelsJournal.white-waves": "White Waves",
+
+    "variachels-journal": {
+        "on-start": {
+            "message": "Variachel's Journal v13.0.0 | Ready."
+        },
+        "styles": "Variachel's Journal Styles",
+        "sheet-label": "Variachel's Journal",
+        "settings": {
+            "disable-stying": "Disable all styling?",
+            "disable-styling-hint": "This will remove all custom styling. Not recommended. Will reload on save.",
+            "change-journal-background": "Change journal background",
+            "change-journal-background-hint": "This will change the background of the journal. Will reload on save."
+        },
+        "backgrounds": {
+            "cobblestone": "Cobblestone",
+            "dark-fish-skin": "Dark Fish Skin",
+            "egg-shell": "Egg Shell",
+            "grunge": "Grunge",
+            "hexellence": "Hexellence",
+            "little-plusses": "Little Plusses",
+            "mocha-grunge": "Mocha Grunge",
+            "old-moon": "Old Moon",
+            "paper": "Paper",
+            "sandpaper": "Sandpaper",
+            "squared-metal": "Squared Metal",
+            "vintage-concrete": "Vintage Concrete",
+            "white-waves": "White Waves"
+        }
+    }
 }
