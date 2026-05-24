@@ -11,6 +11,15 @@
     }
 }
 
+/* campaign codex override*/
+.sheet.journal-entry.cc-editor .window-content {
+    background: url('../textures/egg-shell.png') repeat !important;
+}
+
+.campaign-codex .sheet-container {
+    background: url('../textures/egg-shell.png') repeat !important;
+}
+
 .chat-message.message {
     background: url('../textures/egg-shell.png') repeat !important;
 }
