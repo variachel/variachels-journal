@@ -1,5 +1,5 @@
 {
-    "VariachelsJournal.ready": "Variachel's Journal v2.3.0 | Ready.",
+    "VariachelsJournal.ready": "Variachel's Journal v14.0.0 | Ready.",
     "VariachelsJournal.sheet-label": "Variachel's Journal",
     "VariachelsJournal.JournalStyles": "Variachel's Journal Styles",
     "VariachelsJournal.Base": "Base Wrapper",
@@ -16,7 +16,7 @@
     "VariachelsJournal.Centered": "Centered",
 
     "VariachelsJournal.disable-all-styling": "Disable all styling?",
-    "VariachelsJournal.disable-all-styling-hint": "This will remove all custom styling. Not recommended. Will reload on save",
+    "VariachelsJournal.disable-all-styling-hint": "This will remove all custom styling. Not recommended. Will reload on save.",
     "VariachelsJournal.change-background": "Change Journal Background",
     "VariachelsJournal.change-background-hint": "This will change the background of the journal. Will reload on save.",
 
@@ -36,7 +36,7 @@
 
     "variachels-journal": {
         "on-start": {
-            "message": "Variachel's Journal v13.0.0 | Ready."
+            "message": "Variachel's Journal v14.0.0 | Ready."
         },
         "styles": "Variachel's Journal Styles",
         "sheet-label": "Variachel's Journal",
